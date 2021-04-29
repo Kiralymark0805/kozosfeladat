@@ -1,12 +1,190 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rendelés</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="cukraszda.css">
+
 </head>
+
 <body>
-    
-</body>
+<header>
+    <div class="menu">
+        <nav class="navbar navbar-expand-md bg-dark  navbar-dark">
+
+            <a class="navbar-brand" target="_blank" href="#"></a>
+
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuneve">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="menuneve">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" target="_blank" href="cukraszda.html">Kezdőlap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" target="_blank" href="cukraszda.html">Torták</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" target="_blank" href="cukraszda.html">Sütemények</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" target="_blank" href="cukraszda.html">Fagylaltok</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" target="_blank" href="cukraszda.html">Kapcsolat</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cukraszda.html">Rendelés</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+    <body>
+        <div class="container" style="padding-top: 20px;">
+            <div class="row">
+                <div id="rendelések" class="col-sm-12">
+                    <form action="" method="POST" name="urlap">
+                        <div class="form-group">
+                            <label for="name">Név:</label>
+                            <input type="name" class="form-control" id="name" name="name">
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="email">E-mail cím:</label>
+                            <input type="email" class="form-control" id="email" placeholder="email@example.com"
+                                name="email">
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="number">Telefonszám:</label>
+                            <input type="number" class="form-control" id="number" name="number">
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="date">Dátum</label>
+                            <input type="date" class="form-control" id="date" name="date">
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="lakcím">Lakcím:</label>
+                            <input type="text" class="form-control" id="lakcím" placeholder="irányítószám,település,utca,házszám" name="lakcím">
+                        </div>
+                        <br>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="sutemenyek">Sütemények</label>
+                        <select name="sutemenyek" id="sutemenyek">
+                        <option value="nincs">Nincs kiválasztva</option>
+                        <option value="sutemenyek">Mini zserbó</option>
+                        <option value="sutemenyek">Néró</option>
+                        <option value="sutemenyek">Mini linzer</option>
+                        <option value="suti">Somlói galuska szelet</option>
+                        <option value="suti">Rákóczi túróslepény</option>
+                        <option value="suti">Kókuszkocka</option>
+                        <option value="suti">Mézes krémes</option>
+                        <option value="suti">Farsangi fánk</option>
+                        </select>
+                        <br>
+                        <br>
+                        <div class="form-group">
+                            <label for="number"></label>
+                            <input type="number" class="form-control" min="1" id="number" name="number">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" style="text-align: center;">
+                    <div class="form-group">
+                        <label for="torták">Torták</label>
+                        <select name="tortak" id="tortak">
+                        <option value="nincs">Nincs kiválasztva</option>
+                        <option value="torta">Francia krémes</option>
+                        <option value="torta">Fekete erdő</option>
+                        <option value="torta">Elitritolos Csokoládé</option>
+                        <option value="torta">Egri csillag</option>
+                        <option value="torta">Dobos</option>
+                        <option value="torta">Csokoládé</option>
+                        <option value="torta">Oroszkrém</option>
+                        <option value="torta">Málnás tüffel</option>
+                        </select>
+                        <br>
+                        <br>
+                        <div class="form-group">
+                            <label for="number"></label>
+                            <input type="number" class="form-control" min="1" id="number" name="number">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" style="text-align: right;">
+                    <div class="form-group">
+                        <label for="fagylaltok">Fagylaltok</label>
+                        <select name="fagylaltok" id="fagylaltok">
+                        <option value="nincs">Nincs kiválasztva</option>
+                        <option value="fagyi">Csokoládé</option>
+                        <option value="fagyi">Eper</option>
+                        <option value="fagyi">Citrom</option>
+                        <option value="fagyi">Puncs</option>
+                        <option value="fagyi">Somlói</option>
+                        <option value="fagyi">Sárgabarack</option>
+                        <option value="fagyi">Málna</option>
+                        <option value="fagyi">Vanília</option>
+                        </select>
+                        <br>
+                        <br>
+                        <div class="form-group">
+                            <label style="text-align: center;" for="number"></label>
+                            <input type="number" class="form-control" min="1" id="number" name="number">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" style="text-align: center;">
+            <div class="row">
+                <div class="col-sm-12">
+                    <p>További megjegyzések</p>
+                    <textarea cols=100 rows=5></textarea>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="check" name="check">
+                        <label class="blockquote" class="form-check-label" for="check">Az Adatkezelési
+                            tájékoztatót megismertem és elfogadom</label>
+                        <br><br>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-primary">Rendelés</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </form>
+
+
+
+
+
+
+
+    </body>
+
 </html>
